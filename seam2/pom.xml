@@ -17,47 +17,11 @@
   <description>Examples that demonstrate how to test Seam 2 application</description>
 
   <properties>
-    <!-- Versioning -->
-    <version.arquillian.seam2>1.0.0.Alpha2</version.arquillian.seam2>
     <version.fest.assert>1.4</version.fest.assert>
     <version.seam>2.2.2.Final</version.seam>
   </properties>
 
-  <repositories>
-    <repository>
-      <id>jboss-public-repository-group</id>
-      <name>JBoss Public Maven Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
-      <layout>default</layout>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>never</updatePolicy>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>jboss-depracated</id>
-      <url>https://repository.jboss.org/nexus/content/repositories/deprecated</url>
-    </repository>
-    <repository>
-      <id>java.net.downlad</id>
-      <url>http://download.java.net/maven/2</url>
-    </repository>
-    <repository>
-      <id>maven1</id>
-      <url>http://download.java.net/maven</url>
-    </repository>
-    <repository>
-      <id>nuxeo</id>
-      <url>https://maven.nuxeo.org/nexus/content/repositories/public/</url>
-    </repository>
-  </repositories>
-
   <dependencies>
-
     <dependency>
       <groupId>org.jboss.seam</groupId>
       <artifactId>jboss-seam</artifactId>
@@ -80,7 +44,6 @@
     <dependency>
       <groupId>org.jboss.arquillian.extension</groupId>
       <artifactId>arquillian-seam2</artifactId>
-      <version>${version.arquillian.seam2}</version>
       <scope>test</scope>
     </dependency>
 
@@ -103,7 +66,7 @@
         <dependency>
           <groupId>org.jboss.arquillian.container</groupId>
           <artifactId>arquillian-jbossas-managed-5.1</artifactId>
-          <version>1.0.0.CR3</version>
+          <version>${version.arquillian_container_jbossas}</version>
           <scope>test</scope>
         </dependency>
         <dependency>
@@ -140,7 +103,7 @@
         <dependency>
           <groupId>org.jboss.arquillian.container</groupId>
           <artifactId>arquillian-jbossas-remote-5.1</artifactId>
-          <version>1.0.0.CR3</version>
+          <version>${version.arquillian_container_jbossas}</version>
           <scope>test</scope>
         </dependency>
         <dependency>
@@ -171,26 +134,26 @@
         <dependency>
           <groupId>org.jboss.arquillian.container</groupId>
           <artifactId>arquillian-jbossas-managed-4.2</artifactId>
-          <version>1.0.0.CR3</version>
+          <version>${version.arquillian_container_jbossas}</version>
           <scope>test</scope>
         </dependency>
         <dependency>
           <groupId>org.jboss.jbossas</groupId>
           <artifactId>jboss-server-manager</artifactId>
           <version>1.0.3.GA</version>
-          <scope>test</scope>
+          <scope>compile</scope>
         </dependency>
         <dependency>
           <groupId>org.jboss.client</groupId>
           <artifactId>jbossall-client</artifactId>
           <version>4.2.3.GA</version>
-          <scope>provided</scope>
+          <scope>compile</scope>
         </dependency>
         <dependency>
           <groupId>dom4j</groupId>
           <artifactId>dom4j</artifactId>
           <version>1.6.1</version>
-          <scope>provided</scope>
+          <scope>compile</scope>
         </dependency>
       </dependencies>
       <build>
@@ -237,7 +200,7 @@
         <dependency>
           <groupId>org.jboss.arquillian.container</groupId>
           <artifactId>arquillian-jbossas-remote-4.2</artifactId>
-          <version>1.0.0.CR3</version>
+          <version>${version.arquillian_container_jbossas}</version>
           <scope>test</scope>
         </dependency>
         <dependency>
